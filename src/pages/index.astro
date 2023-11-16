@@ -1,51 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import VideoCard from '../components/VideoCard.astro'
 import AnimatedBackground from '../components/AnimatedBackground.astro'
-import FlipdownClock from '../components/FlipdownClock.astro'
-import BgCanvas from '../components/BgCanvas.astro';
 ---
 <Layout>
-		<AnimatedBackground />
-		<!-- <BgCanvas /> -->
-		<main>
-			<h1>Começamos em breve</h1>
-			<div id="countdown">
-				<FlipdownClock />
-			</div>
-			<div id="cam">
-				<VideoCard />
-			</div>
-		</main>
+	<AnimatedBackground /> 
 </Layout>
-
-
-<style>
-	main {
-		height: 100vh;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		gap: 20px;
-		padding: 80px;
-	}
-
-	h1 {
-		font-size: 80px;
-		font-family: 'Inter', sans-serif;
-		font-weight: 900;
-		align-self: end;
-		max-width: 450px;
-		text-transform: uppercase;
-		color: white;
-		text-shadow: 2px 2px 4px rgb(0 0 0 / 0.2);
-	}
-
-	#cam {
-		grid-column: 2/3;
-    grid-row: 1/3;
-
-		align-self: center;
-		justify-self: end;
-	}
-</style>
