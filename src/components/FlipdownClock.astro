@@ -1,0 +1,36 @@
+---
+---
+<div id="flipdown" class="flipdown"></div>
+
+<style>
+  #flipdown {
+		transform: scale(2) translateX(25%);
+	}
+</style>
+
+<script>
+  function getTime() {
+    // Obtém a data e hora atual
+    const agora = new Date();
+
+    // Configura o fuso horário para "America/Sao_Paulo"
+    const fusoHorario = "America/Sao_Paulo";
+    const offsetAtual = agora.getTimezoneOffset();
+    const offsetSaoPaulo = Intl.DateTimeFormat(undefined, {timeZone: fusoHorario}).resolvedOptions().timeZone;
+
+    // Calcula a diferença de offset entre o fuso horário atual e "America/Sao_Paulo"
+    const diferencaOffset = (offsetAtual - (new Date(agora.toLocaleString('en-US', { timeZone: offsetSaoPaulo }))).getTimezoneOffset()) * 60 * 1000;
+
+    // Adiciona 5 minutos à data atual considerando a diferença de offset
+    const cincoMinutosDepois = new Date(agora.getTime() + 5 * 60 * 1000 + diferencaOffset);
+
+    return Math.floor(cincoMinutosDepois.getTime() / 1000);
+  }
+  
+  new FlipDown(getTime()).start();
+  const days = document.querySelector('#countdown #flipdown .rotor-group:nth-child(1)')
+  const hours = document.querySelector('#countdown #flipdown .rotor-group:nth-child(2)')
+  days.style.display = 'none'
+  hours.style.display = 'none'
+
+</script>
