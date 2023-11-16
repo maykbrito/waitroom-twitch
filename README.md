@@ -4,4 +4,10 @@
 
 🏠 https://moonlit-elf-5a2387.netlify.app/
 
-goto `/canvas` to get another background
+goto [`/canvas`](https://moonlit-elf-5a2387.netlify.app/canvas) to get another background
+
+---
+
+## Technologies
+
+built with astro.build and lot of code snippets from codepen and chatgpt
