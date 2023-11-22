@@ -7,7 +7,21 @@ import FlipdownClock from "../components/FlipdownClock.astro";
 
 <style is:global>
   body {
-    background-color: rgb(0 0 0 / 0.1);
+    background-color: rgb(0 0 0 / 0.01);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+
+  #flipdown {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(233 237 244 / 75%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 10px 20px 20px;
+    width: fit-content;
+    transform: scale(2) translateX(0) !important;
   }
 
   #flipdown > div:nth-child(1),
