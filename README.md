@@ -6,6 +6,8 @@
 
 goto [`/canvas`](https://moonlit-elf-5a2387.netlify.app/canvas) to get another background
 
+goto [`/clock-only`](https://moonlit-elf-5a2387.netlify.app/clock-only) to get only the clock
+
 ---
 
 ## Technologies

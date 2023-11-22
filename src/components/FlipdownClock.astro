@@ -28,8 +28,10 @@
   }
   
   new FlipDown(getTime()).start();
-  const days = document.querySelector('#countdown #flipdown .rotor-group:nth-child(1)')
-  const hours = document.querySelector('#countdown #flipdown .rotor-group:nth-child(2)')
+  
+  const days = document.querySelector('#flipdown > div:nth-child(1)') as HTMLElement
+  const hours = document.querySelector('#flipdown > div:nth-child(2)') as HTMLElement
+  
   days.style.display = 'none'
   hours.style.display = 'none'
 

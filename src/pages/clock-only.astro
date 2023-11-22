@@ -1,0 +1,17 @@
+---
+import FlipdownClock from "../components/FlipdownClock.astro";
+---
+<link rel="stylesheet" href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css"/>
+<script defer src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
+<FlipdownClock />
+
+<style is:global>
+  body {
+    background-color: rgb(0 0 0 / 0.1);
+  }
+
+  #flipdown > div:nth-child(1),
+  #flipdown > div:nth-child(2) {
+    display: none;
+  }
+</style>
