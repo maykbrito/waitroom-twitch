@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+<script>
+	let theURL = new URL(window.location.href)
+	let style = ''
+	const bg = theURL.searchParams.get('bg')
+	if(bg) {
+		style += `
+		body {
+			background: ${bg} no-repeat center/cover;
+		}
+		`
+	}
+
+	const clockTheme = theURL.searchParams.get('clock-theme')
+	if(clockTheme) {
+		let theme = clockTheme == 'dark' ? 'flipdown__theme-dark' : 'flipdown__theme-light'
+		document.querySelector('#flipdown').setAttribute('class', `flipdown ${theme}`)
+	}
+
+	const stylesheet = document.createElement('style') as HTMLElement
+	stylesheet.innerHTML = style
+	document.head.appendChild(stylesheet)
+</script>
+<Layout>
+</Layout>
